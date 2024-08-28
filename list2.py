@@ -7,9 +7,19 @@
 
 def remove_adjacent(nums):
     # +++your code here+++
-    return
+    if not nums:
+         return[]
+    result = [nums[0]]
+    for num in nums[1:]:
+         if num != result[-1]:
 
 
+            result.append(num)
+
+    return result
+print(remove_adjacent([1, 2, 2, 3]))
+        
+        
 # E. Given two lists sorted in increasing order, create and return a merged
 # list of all the elements in sorted order. You may modify the passed in lists.
 # Ideally, the solution should work in "linear" time, making a single
@@ -17,10 +27,15 @@ def remove_adjacent(nums):
 
 def linear_merge(list1, list2):
     # +++your code here+++
-    return
+    list1 = sorted(list1)
+    list2 = sorted(list2)
+    if(list1+list2):
+    
+        result.append (list1, list2)
+return result       
+print(linear_merge)
 
-
-# Note: the solution above is kind of cute, but unforunately list.pop(0)
+#Note: the solution above is kind of cute, but unforunately list.pop(0)
 # is not constant time with the standard python list implementation, so
 # the above is not strictly linear time.
 # An alternate approach uses pop(-1) to remove the endmost elements
